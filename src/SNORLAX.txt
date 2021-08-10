@@ -12,6 +12,7 @@ For(Y,~35,15,10   //falling loop
 	RecallPic 2    //redraw background
 	sub(Str2,A*256+1,256   //select sprite to display
 	identity(5,Ans,32,Y,4,32,3,0,1   //display sprite
+	identity(5,Ans,32,Y,4,32,3,0,1		//this clears the sprite
 End
 sub(Str1,A*256+1,256    //select mask
 identity(5,Ans,32,Y-10,4,32,1,0,1   //display mask
@@ -19,4 +20,5 @@ sub(Str2,A*256+1,256    //select sprite
 identity(5,Ans,32,Y-10,4,32,3,0,1   //display sprite
 Pause
 identity(5,Ans,32,Y-10,4,32,3,0,1   //clear sprite
+RecallPic 2		//this makes it smoother
 Goto 1    //loop around (will be removed later)
