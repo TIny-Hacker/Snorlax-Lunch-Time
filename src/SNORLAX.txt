@@ -18,14 +18,19 @@ sub(Str1,A*256+1,256    //select mask
 identity(5,Ans,32,Y-6,4,32,1,0,1   //display mask
 sub(Str2,A*256+1,256    //select sprite
 identity(5,Ans,32,Y-6,4,32,3,0,1   //display sprite
-For(X,87,~1,~8		//loop for arrow
+For(X,87,­1,­8		//loop for arrow
 	identity(5,"1C224282828242221C",X,55,1,9,3,0,1		//display arrow
-	For(T,1,30		//random timer loop
+	For(T,1,20		//hide arrow
 	End
 	identity(5,"1C224282828242221C",X,55,1,9,3,0,1		//remove arrow
+	getKey		//listen for key press
+	If Ans=21:Goto C		//if the 2nd key (21) was pressed, display coordinate (later score)
 End
+Disp "U MISSSED"		//if 2nd wasn't pressed ever, then display you missed
+Lbl C
+Disp X		//display coordinate (later score)
 Pause
 sub(Str1,A*256+1,256		//select sprite to remove
 identity(5,Ans,32,Y-6,4,32,1,0,1		//remove sprite
-RecallPic 2		//redraw the background
-Goto 1
+RecallPic 2		//redraw background
+Goto 1		//restart loop
