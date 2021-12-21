@@ -16,3 +16,9 @@ To navigate the menu, use [2ND] and the [UP] and [DOWN] keys.
 The goal of the game is to eat the food as fast as possible. Food will fall onto Snorlax's plate from out of the sky, and you must press [2ND]
 before the timer runs out. The faster you eat the food, the higher your score will be. Occasionally, however, a Pichu will fall ont Snorlax's 
 plate. Don't ask how it got there, but you can't eat it. If you try to eat the Pichu, it will zap you and you will lose the game. 
+
+
+#### Disclaimer
+
+I did not make up Snorlax, Pichu, or the original idea of this game and I do not take any credit for anything other than coding it 
+onto my calculator.
